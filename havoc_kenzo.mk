@@ -57,4 +57,5 @@ PRODUCT_PACKAGES += \
     OneplusWidget \
     Screenrecorder \
     MintBrowser \
+    BlackPlayer \
     RemovePackages
