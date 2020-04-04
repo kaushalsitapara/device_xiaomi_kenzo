@@ -17,14 +17,14 @@ $(call inherit-product, device/xiaomi/kenzo/full_kenzo.mk)
 
 
 # Inherit some common BlissOS stuff.
-$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := kenzo
-PRODUCT_NAME := bliss_kenzo
+PRODUCT_NAME := superior_kenzo
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 3
 TARGET_VENDOR := Xiaomi
@@ -47,16 +47,11 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOT_ANIMATION_RES := 1080
 
-USE_CCACHE=0
 
-export BLISS_BUILDTYPE=OFFICIAL
-export BLISS_DEVELOPER=Magicxavi
+
 
 PRODUCT_PACKAGES += \
     AdvancedControls \
     MGC_7.3.020 \
     OneplusWidget \
-    Screenrecorder \
-    MintBrowser \
-    BlackPlayer \
-    RemovePackages
+    RemovePackages 
