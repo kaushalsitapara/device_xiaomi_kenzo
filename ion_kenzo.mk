@@ -16,7 +16,7 @@
 $(call inherit-product, device/xiaomi/kenzo/full_kenzo.mk)
 
 
-# Inherit some common BlissOS stuff.
+# Inherit some common ion stuff.
 $(call inherit-product, vendor/ion/config/common_full_phone.mk)
 
 
@@ -29,6 +29,7 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 3
 TARGET_VENDOR := Xiaomi
 IS_PHONE := true
+TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_STOCK_ARCORE := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -41,13 +42,22 @@ BUILD_FINGERPRINT=Xiaomi/kenzo/kenzo:6.0.1/MMB29M/V8.2.1.0.MHOCNDL:user/release-
 
 # Product packages
 TARGET_USE_JELLY := true
-
+PRODUCT_PACKAGES += \
+    AdvancedControls \
+    OneplusWidget \
+    RemovePackages
+	
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
+    
+# Ion Official
+ION_BUILD_TYPE := UNOFFICIAL
+ION_RELEASE_TYPE := Release
 
-PRODUCT_PACKAGES += \
-    AdvancedControls \
-    OneplusWidget 
+# Ion Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ion.maintainer = kaushalsitapara
+
+TARGET_GAPPS_ARCH := arm64
