@@ -61,3 +61,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.ion.maintainer = kaushalsitapara
 
 TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_WIFI_EXT := false
