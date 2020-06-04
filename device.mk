@@ -56,3 +56,6 @@ PRODUCT_COPY_FILES += \
 
 # Inherit from msm8956-common
 $(call inherit-product, device/xiaomi/msm8956-common/msm8956.mk)
+
+#APEX
+TARGET_FLATTEN_APEX := false
